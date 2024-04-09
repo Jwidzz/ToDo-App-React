@@ -28,9 +28,6 @@
       "react-app/jest"
     ]
   },
-  "plugins": [
-    "@stylistic/js"
-  ],
   "browserslist": {
     "production": [
       ">0.2%",
