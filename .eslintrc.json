@@ -20,7 +20,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier", "import", "@stylistic/js", "@babel"],
+  "plugins": ["react", "prettier", "import"],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": [0, "unix"],
@@ -32,31 +32,16 @@
     "prettier/prettier": "error",
     "import/no-unresolved": [2, { "caseSensitive": false }],
     "react/state-in-constructor": ["error", "never"],
-    "react/static-property-placement": ["error", "static public field"],
-
-    "@babel/new-cap": "error",
-    "@babel/no-invalid-this": "error",
-    "@babel/no-unused-expressions": "error",
-    "@babel/object-curly-spacing": ["error", "always"],
-    "@babel/semi": "error",
-
+    "react/static-property-placement" : ["error", "static public field"],
     "import/order": [
       2,
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
         "newlines-between": "always"
       }
     ]
   },
   "settings": {
-    "version": "detect",
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"],
