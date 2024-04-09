@@ -1,10 +1,8 @@
 import React from 'react';
 
-
 export default class NewTaskForm extends React.Component {
-  state = {
-    description: '',
-  };
+
+  state = { description: '' };
 
   onTextChange = (event) => {
     this.setState({ description: event.target.value });
@@ -13,19 +11,17 @@ export default class NewTaskForm extends React.Component {
   onSubmit = (event) => {
     event.preventDefault();
     this.props.onTaskAdded(this.state.description);
-    this.setState(()=> {
-      return {
-        description: ''
-      }
-    })
+    this.setState(() => {
+      return { description: '' };
+    });
   };
 
   render() {
     return (
       <form onSubmit={this.onSubmit}>
         <input
-          className='new-todo'
-          placeholder='What needs to be done?'
+          className="new-todo"
+          placeholder="What needs to be done?"
           autoFocus
           onChange={this.onTextChange}
           value={this.state.description}
@@ -35,6 +31,4 @@ export default class NewTaskForm extends React.Component {
   }
 }
 
-NewTaskForm.defaultProps = {
-  onTaskAdded: () => {},
-};
+NewTaskForm.defaultProps = { onTaskAdded: () => {} };

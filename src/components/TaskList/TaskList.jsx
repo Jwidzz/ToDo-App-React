@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Task from '../Task/Task';
 import PropTypes from 'prop-types';
+import Task from '../Task/Task';
 
 export default class TaskList extends Component {
   static propTypes = {
@@ -9,7 +9,7 @@ export default class TaskList extends Component {
         id: PropTypes.number.isRequired,
         description: PropTypes.string.isRequired,
         done: PropTypes.bool.isRequired,
-      })
+      }),
     ).isRequired,
     onDeleted: PropTypes.func,
     onToggleDone: PropTypes.func,

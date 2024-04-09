@@ -37,9 +37,7 @@ export default class App extends React.Component {
       const before = todoData.slice(0, idx);
       const after = todoData.slice(idx + 1);
 
-      return {
-        todoData: [...before, ...after],
-      };
+      return { todoData: [...before, ...after] };
     });
   };
 
@@ -52,9 +50,7 @@ export default class App extends React.Component {
       const before = todoData.slice(0, idx);
       const after = todoData.slice(idx + 1);
 
-      return {
-        todoData: [...before, newItem, ...after],
-      };
+      return { todoData: [...before, newItem, ...after] };
     });
   };
 
@@ -67,9 +63,7 @@ export default class App extends React.Component {
       const before = todoData.slice(0, idx);
       const after = todoData.slice(idx + 1);
 
-      return {
-        todoData: [...before, newItem, ...after],
-      };
+      return { todoData: [...before, newItem, ...after] };
     });
   };
 
@@ -92,9 +86,7 @@ export default class App extends React.Component {
   };
 
   clearCompletedTasks = () => {
-    this.setState(({ todoData }) => ({
-      todoData: todoData.filter((el) => !el.done),
-    }));
+    this.setState(({ todoData }) => ({ todoData: todoData.filter((el) => !el.done) }));
   };
 
   render() {

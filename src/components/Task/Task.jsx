@@ -3,7 +3,6 @@ import { formatDistanceToNow } from 'date-fns';
 import PropTypes from 'prop-types';
 
 export default class Task extends Component {
-
   static propTypes = {
     id: PropTypes.number.isRequired,
     description: PropTypes.string.isRequired,
@@ -12,7 +11,7 @@ export default class Task extends Component {
     onDeleted: PropTypes.func,
     onToggleDone: PropTypes.func,
     onEdit: PropTypes.func,
-  }  
+  };
 
   state = {
     editedDescription: '',
@@ -53,13 +52,13 @@ export default class Task extends Component {
 
     const dateTask = date
       ? formatDistanceToNow(new Date(date), {
-          includeSeconds: true,
-          addSuffix: true,
-        })
+        includeSeconds: true,
+        addSuffix: true,
+      })
       : '';
 
     return (
-      <li className={done ? 'completed' : editing ? 'editing' : null}>
+      <li className={ done ? 'completed' : editing ? 'editing' : null }>
         {editing ? (
           <form onSubmit={this.onSubmitUpdatedTask}>
             <input

@@ -16,27 +16,22 @@ export default class TasksFilter extends React.Component {
       case 'All':
         onFilter(key);
         this.setState(() => {
-          return {
-            buttons: { all: true, active: false, complited: false },
-          };
+          return { buttons: { all: true, active: false, complited: false } };
         });
         break;
       case 'Active':
         onFilter(key);
         this.setState(() => {
-          return {
-            buttons: { all: false, active: true, complited: false },
-          };
+          return { buttons: { all: false, active: true, complited: false } };
         });
         break;
       case 'Completed':
         onFilter(key);
         this.setState(() => {
-          return {
-            buttons: { all: false, active: false, complited: true },
-          };
+          return { buttons: { all: false, active: false, complited: true } };
         });
         break;
+      // skip default case
     }
   };
 
@@ -82,10 +77,6 @@ export default class TasksFilter extends React.Component {
   }
 }
 
-TasksFilter.defaultProps = {
-  onFilter: () => {},
-};
+TasksFilter.defaultProps = { onFilter: () => {} };
 
-TasksFilter.propTypes = {
-  onFilter: PropTypes.func,
-};
+TasksFilter.propTypes = { onFilter: PropTypes.func };
